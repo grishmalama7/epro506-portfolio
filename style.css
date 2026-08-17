@@ -352,6 +352,7 @@ a:focus-visible, button:focus-visible, .card:focus-visible { outline: 3px solid 
 .resource-card a.title-link { font-weight: 700; font-size: 0.98rem; display: block; margin-bottom: 8px; text-decoration: none; color: var(--ink); }
 .resource-card a.title-link:hover { color: var(--accent-dark); }
 .resource-card p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+.resource-card .byline { display: block; font-size: 0.78rem; font-style: italic; color: var(--sage); margin-bottom: 4px; }
 
 /* ---- Poster-style cards for storybooks and videos ---- */
 .poster-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
@@ -431,6 +432,7 @@ a:focus-visible, button:focus-visible, .card:focus-visible { outline: 3px solid 
 .references-image { border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 26px -14px rgba(79,131,113,0.35); }
 .references-image svg { width: 100%; height: auto; display: block; }
 .references-list { font-size: 0.92rem; line-height: 1.9; color: var(--ink-soft); }
+.references-list .ref-entry { margin: 0 0 20px; padding-left: 1.6em; text-indent: -1.6em; }
 @media (max-width: 800px) {
   .references-wrap { grid-template-columns: 1fr; }
   .references-image { max-width: 320px; }
