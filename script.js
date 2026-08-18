@@ -19,6 +19,12 @@ function initSite() {
       overlay.classList.remove('visible');
       sessionStorage.setItem('ackSeen', '1');
       setTimeout(function () { overlay.style.display = 'none'; }, 400);
+      // Return keyboard focus to the page's main heading rather than
+      // leaving it lost on a now-hidden element.
+      var mainHeading = document.querySelector('main h1');
+      if (mainHeading) {
+        mainHeading.focus();
+      }
     }
     if (closeBtn) closeBtn.addEventListener('click', closeAck);
     overlay.addEventListener('click', function (e) {
@@ -34,7 +40,8 @@ function initSite() {
   var links = document.getElementById('navLinks');
   if (toggle && links) {
     toggle.addEventListener('click', function () {
-      links.classList.toggle('open');
+      var isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 
